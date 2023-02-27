@@ -23,50 +23,62 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	</head>
 
 	<body class="home blog">
-		<div id="homepage" class="hola fadeIn" data-wow-delay=".5s">
-			<div class="row">
-				<video
-					id="homevideo"
-					poster="assets/img/novideo.jpg"
-					autoplay=""
-					loop=""
-					style="width: 100%; height: auto"
-				></video>
+		<div
+			id="homepage"
+			class="hola fadeIn"
+			style="display: flex; flex-direction: column; justify-content: flex-end"
+		>
+			<video
+				id="homevideo"
+				poster="assets/img/novideo.jpg"
+				autoplay=""
+				loop=""
+				style="width: 100%; height: auto"
+			></video>
+			<div style="text-align: center; padding: 10%">
+				<div class="swiper" style="color: white; margin-bottom: 15px">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<h2 style="text-transform: uppercase">
+								Декоративная отделка<br />
+								в Нижнем Новгороде и обл.
+							</h2>
+							<p style="color: #b7b5c5">
+								Отделка стен декоративной и венецианской штукатуркой любой сложности, внутри
+								и снаружи помещений.
+							</p>
+						</div>
 
-				<div class="intro2">
-					<div id="slide-1">
-						<h2>
-							Декоративная отделка<br />
-							в Нижнем Новгороде и обл.
-						</h2>
-						<p>
-							Отделка стен декоративной и венецианской штукатуркой любой сложности, внутри и
-							снаружи помещений.
-						</p>
+						<div class="swiper-slide">
+							<h2 style="text-transform: uppercase">
+								Поставка строительных<br />материалов
+							</h2>
+							<p style="color: #b7b5c5">
+								Мы напрямую сотрудничаем с производителями стройматериалов и предоставим вам
+								материалы по выгодным ценам.
+							</p>
+						</div>
+
+						<div class="swiper-slide">
+							<h2 style="text-transform: uppercase">ПОДБОР<br />КРАСОК</h2>
+							<p style="color: #b7b5c5">
+								Подбор осуществляют мастера, отлично ориентирующиеся в тонкостях ремонта.
+							</p>
+						</div>
 					</div>
-					<!-- TODO: slider -->
-
-					<!-- <div id="slide-2">
-                            <h2>Поставка строительных<br>материалов</h2>
-                            <p>Мы напрямую сотрудничаем с производителями стройматериалов и предоставим вам материалы по выгодным ценам.</p>
-                        </div>
-                    
-                        <div id="slide-3">
-                            <h2>ПОДБОР<br>КРАСОК</h2>
-                            <p>Подбор осуществляют мастера, отлично ориентирующиеся в тонкостях ремонта.</p>
-                        </div> -->
-
-					<a href="#contacts" class="button button-red">Предложить проект</a>
 				</div>
+
+				<a href="#contacts" class="button button-red">Предложить проект</a>
 			</div>
 		</div>
 
 		<div
 			class="nav hola fadeIn navigation"
-			data-wow-delay=".5s"
 			style="
 				visibility: visible;
 				animation-duration: 2s;
@@ -106,7 +118,7 @@
 								id="menu-item-375"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-375"
 							>
-								<a href="./pages/catalog-effects/index.html">Каталог товаров</a>
+								<a href="./pages/catalog-products/index.html">Каталог товаров</a>
 							</li>
 							<li
 								id="menu-item-389"
@@ -255,8 +267,8 @@
 							background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 						"
 					>
-						<a href="job/zakaz-traverta-decorazza/index.htm">
-							<div class="t132__textwrapper" style="height: 50%; width: 50%">
+						<a href="./pages/zakaz-traverta-decorazza/index.html">
+							<div class="t132__textwrapper" style="height: 70%; width: 50%">
 								<span>
 									<div class="t132__uptitle t-title"></div>
 									<div class="t132__title t-title t-title_xxs">
@@ -303,8 +315,8 @@
 							background-image: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 						"
 					>
-						<a href="job/proekt-v-zhk-novaya-zvezda-dushevaya/index.htm">
-							<div class="t132__textwrapper" style="height: 50%; width: 50%">
+						<a href="./pages/proekt-v-zhk-novaya-zvezda-dushevaya/index.html">
+							<div class="t132__textwrapper" style="height: 70%; width: 50%">
 								<span>
 									<div class="t132__uptitle t-title">Москва</div>
 									<div class="t132__title t-title t-title_xxs">
@@ -324,7 +336,10 @@
 				</div>
 			</div>
 			<p class="aligncenter job-all" style="margin-bottom: 0">
-				<a href="job/index.htm" title="Портфолио" class="button button-default button-icon"
+				<a
+					href="./pages/job/index.html"
+					title="Портфолио"
+					class="button button-default button-icon"
 					><i class="fa fa-briefcase"></i>Все работы</a
 				>
 			</p>
@@ -335,7 +350,7 @@
 					class="title hola fadeIn"
 					style="visibility: visible; animation-duration: 2s; animation-name: fadeIn"
 				>
-					Блог
+					<a href="./pages/blogs/index.html">Блог</a>
 				</div>
 				<div
 					class="hola fadeIn"
@@ -347,25 +362,23 @@
 						animation-name: fadeIn;
 					"
 				>
-					<ul class="categories">
-						<li class="cat-item"><a href="category/stati/index.htm">Статьи</a></li>
-					</ul>
-
 					<div class="my-posts">
 						<div class="item one_third simple">
 							<div class="thumbnail">
-								<a href="kolerovka-dekorativnyh-shtukaturok-i-krasok/index.html">
+								<a
+									href="./pages/blogs/kolerovka-dekorativnyh-shtukaturok-i-krasok/index.html"
+								>
 									<img src="assets/img/kolerovka-480x288.jpg" alt="kolerovka" />
 								</a>
 							</div>
 							<div class="content">
 								<p class="meta"></p>
 								<ul class="post-categories">
-									<li><a href="category/stati/index.html">Статьи</a></li>
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
 								</ul>
 								<p class="post-p">
 									<a
-										href="kolerovka-dekorativnyh-shtukaturok-i-krasok/index.html"
+										href="./pages/blogs/kolerovka-dekorativnyh-shtukaturok-i-krasok/index.html"
 										title="Колеровка декоративных штукатурок и красок"
 									>
 										<strong>Колеровка декоративных штукатурок и красок</strong> — Подбор
@@ -381,18 +394,21 @@
 						</div>
 						<div class="item one_third simple">
 							<div class="thumbnail">
-								<a href="shtukaturka-s-effektom-shelka/index.htm">
-									<img src="assets/img/velours-480x288.jpg" alt="" />
+								<a href="./pages/blogs/shtukaturka-s-effektom-shelka/index.html">
+									<img
+										src="assets/img/velours-480x288.jpg"
+										alt="Штукатурка с эффектом шелка"
+									/>
 								</a>
 							</div>
 							<div class="content">
 								<p class="meta"></p>
 								<ul class="post-categories">
-									<li><a href="category/stati/index.htm">Статьи</a></li>
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
 								</ul>
 								<p class="post-p">
 									<a
-										href="shtukaturka-s-effektom-shelka/index.htm"
+										href="./pages/blogs/shtukaturka-s-effektom-shelka/index.html"
 										title="Штукатурка с эффектом шелка"
 									>
 										<strong>Штукатурка с эффектом шелка</strong> — Современный
@@ -408,17 +424,17 @@
 						</div>
 						<div class="item one_third simple">
 							<div class="thumbnail">
-								<a href="o-materialah/index.htm">
-									<img src="assets/img/o-materialah-480x288.jpg" alt="" />
+								<a href="./pages/blogs/o-materialah/index.html">
+									<img src="assets/img/o-materialah-480x288.jpg" alt="О материалах" />
 								</a>
 							</div>
 							<div class="content">
 								<p class="meta"></p>
 								<ul class="post-categories">
-									<li><a href="category/stati/index.htm">Статьи</a></li>
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
 								</ul>
 								<p class="post-p">
-									<a href="o-materialah/index.htm" title="О материалах">
+									<a href="./pages/blogs/o-materialah/index.html" title="О материалах">
 										<strong>О материалах</strong> — О материалах Выбора строительных
 										материалов для внутренней отделки стен великое множество, но
 										наибольшей популярностью пользуются декоративные краски и фактурные
@@ -431,13 +447,104 @@
 							<footer><i class="fa fa-calendar"></i> 3 года назад</footer>
 						</div>
 					</div>
+					<div class="my-posts post-hidden">
+						<div class="item one_third simple">
+							<div class="thumbnail">
+								<a
+									href="./pages/blogs/dekorativnaya-shtukaturka-nizhnij-novgorod/index.html"
+								>
+									<img
+										src="assets/img/dekorativnaya-shtukaturka-nizhnij-novgorod-480x288.jpg"
+										alt="kolerovka"
+									/>
+								</a>
+							</div>
+							<div class="content">
+								<p class="meta"></p>
+								<ul class="post-categories">
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
+								</ul>
+								<p class="post-p">
+									<a
+										href="./pages/blogs/dekorativnaya-shtukaturka-nizhnij-novgorod/index.html"
+										title="Декоративная штукатурка Нижний Новгород"
+									>
+										<strong>Декоративная штукатурка Нижний Новгород</strong> —
+										Декоративная штукатурка – популярное отделочное средство. Она
+										изготавливается на основе минерального, либо синтетического материала,
+										включает в себя разнообразные наполнители и другие добавки.
+										Декоративная
+									</a>
+								</p>
+							</div>
+
+							<footer><i class="fa fa-calendar"></i> 3 года назад</footer>
+						</div>
+						<div class="item one_third simple">
+							<div class="thumbnail">
+								<a
+									href="./pages/blogs/veneczianskaya-shtukaturka-nizhnij-novgorod/index.html"
+								>
+									<img
+										src="assets/img/venetsianskaya-shtukaturka-nizhniy-novgorod-480x288.jpg"
+										alt="Венецианская штукатурка Нижний Новгород"
+									/>
+								</a>
+							</div>
+							<div class="content">
+								<p class="meta"></p>
+								<ul class="post-categories">
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
+								</ul>
+								<p class="post-p">
+									<a
+										href="./pages/blogs/veneczianskaya-shtukaturka-nizhnij-novgorod/index.html"
+										title="Штукатурка с эффектом шелка"
+									>
+										<strong>Венецианская штукатурка Нижний Новгород</strong> — Ещё в
+										Древнем Риме изобретательные мастера однажды попробовали смешать
+										мраморную пыль и гашеную известь. В результате получился совершенно
+										новый отделочный материал, по своим свойствам не уступавший мрамору.
+										Мягкий и эластичный, при этом
+									</a>
+								</p>
+							</div>
+
+							<footer><i class="fa fa-calendar"></i> 3 года назад</footer>
+						</div>
+						<div class="item one_third simple">
+							<div class="thumbnail">
+								<a href="./pages/blogs/master-po-dekorativnoj-shtukaturke/index.html">
+									<img
+										src="assets/img/master-po-dekorativnoy-shtukaturke1-1-480x288.jpg"
+										alt="Мастер по декоративной штукатурке"
+									/>
+								</a>
+							</div>
+							<div class="content">
+								<p class="meta"></p>
+								<ul class="post-categories">
+									<li><a href="./pages/blogs/index.html">Статьи</a></li>
+								</ul>
+								<p class="post-p">
+									<a
+										href="./pages/blogs/master-po-dekorativnoj-shtukaturke/index.html"
+										title="О материалах"
+									>
+										<strong>Мастер по декоративной штукатурке</strong> — Обои и краска на
+										стенах стали настолько банальны, что пора задуматься о новых идеях для
+										дизайна. Отделка декоративной штукатуркой будет отличной идеей для
+										оформления любого помещения. При выборе следует учесть множество
+										нюансов возможностей и
+									</a>
+								</p>
+							</div>
+
+							<footer><i class="fa fa-calendar"></i> 3 года назад</footer>
+						</div>
+					</div>
 					<section class="loadmore">
-						<a
-							id="loadimore"
-							class="button button-icon button-orange hola pulse"
-							data-wow-delay="1s"
-							data-wow-iteration="5"
-						>
+						<a class="button button-icon button-orange hola pulse load_posts">
 							<i class="fa fa-refresh"></i> Загрузить ещё
 						</a>
 					</section>

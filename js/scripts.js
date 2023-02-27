@@ -1,3 +1,11 @@
+const swiper = new Swiper('.swiper', {
+	direction: 'horizontal',
+	loop: true,
+	autoplay: {
+		delay: 5000,
+	},
+});
+
 const menu = document.querySelector('.navigation');
 
 window.addEventListener('scroll', () => {
@@ -31,4 +39,11 @@ $("a[href='#services']").on('click', function (event) {
 		},
 		500
 	);
+});
+
+const loadPosts = document.querySelector('.load_posts');
+const postsAdded = document.querySelector('.post-hidden');
+loadPosts.addEventListener('click', () => {
+	postsAdded.classList.toggle('show');
+	loadPosts.style.display = 'none';
 });

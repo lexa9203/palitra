@@ -5488,3 +5488,11 @@ Author URI: http://roxxi.ru/
 .fixed {
 	background-color: grey !important;
 }
+
+.post-hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
