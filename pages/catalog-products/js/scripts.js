@@ -268,7 +268,7 @@ const products = [
 		materials: ['preparatory-materials'],
 	},
 	{
-		name: 'PAVAN КЕЛЬМА ВЕНЕЦИАНСКАЯ, НЕРЖАВЕЮЩАЯ СТАЛЬ, ТОНКАЯ 0,5 ММ (200Х80 ММ)',
+		name: 'PAVAN КЕЛЬМА ВЕНЕЦИАНСКАЯ, ТОНКАЯ 0,5 ММ (200Х80 ММ)',
 		img: './img/PavanKelmaVenician.png',
 		price: 2750,
 		tools: ['spatulas'],
@@ -514,7 +514,7 @@ const products = [
 		tools: ['brushes'],
 	},
 	{
-		name: 'КИСТЬ-ФЛЕЙЦ КЛАССИК “CHEAP & CHIC” СМЕСЬ НАТУРАЛЬНОЙ ЩЕТИНЫ И СИНТЕТИЧЕСКИХ ВОЛОКОН',
+		name: 'КИСТЬ-ФЛЕЙЦ КЛАССИК “CHEAP & CHIC”',
 		img: './img/CHEAP&CHIC.jpg',
 		price: 190,
 		tools: ['brushes'],
