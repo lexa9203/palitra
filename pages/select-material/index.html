@@ -24,42 +24,38 @@
 			referrerpolicy="no-referrer"
 		></script>
 	</head>
-	<body class="page-template-default page page-id-346">
+	<body class="page-template-default page">
 		<div class="nav" style="visibility: visible">
 			<div class="container">
 				<a class="logo" href="../../index.html" title="На главную"></a>
-
-				<nav id="menu" class="menu">
-					<div class="menu-verhnee-menyu-container">
-						<ul id="menu-verhnee-menyu" class="menu">
+				<div class="spinner-master">
+					<input type="checkbox" id="spinner-form" />
+					<label for="spinner-form" class="spinner-spin">
+						<div class="spinner diagonal part-1"></div>
+						<div class="spinner horizontal"></div>
+						<div class="spinner diagonal part-2"></div>
+					</label>
+				</div>
+				<nav class="menu" id="menu">
+					<div>
+						<ul class="menu">
 							<li class="gohome">
 								<a href="../../index.html"
 									><i class="fa fa-home"></i> <span>Главная</span></a
 								>
 							</li>
-							<li
-								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"
-							>
+							<li>
 								<a href="../../index.html#services">Услуги</a>
 							</li>
-							<li
-								id="menu-item-282"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"
-							>
+							<li>
 								<a href="../shema-rabotyi-po-naneseniyu-shtukaturki/index.html"
 									>Схема работы</a
 								>
 							</li>
-							<li
-								id="menu-item-375"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-375"
-							>
+							<li>
 								<a href="../catalog-products/index.html">Каталог товаров</a>
 							</li>
-							<li
-								id="menu-item-389"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"
-							>
+							<li>
 								<a href="../catalog-effects/index.html">Каталог эффектов</a>
 							</li>
 						</ul>
@@ -76,10 +72,10 @@
 
 		<div class="container">
 			<div class="breadcrumbs">
-				<div class="kama_breadcrumbs">
+				<div>
 					<span
 						><a href="../../index.html"><span>Главная</span></a></span
-					><span class="kb_sep"> › </span> <span class="kb_title">Подбор материала</span>
+					><span> › </span> <span>Подбор материала</span>
 				</div>
 			</div>
 
@@ -105,7 +101,7 @@
 					</p>
 					<p>
 						<img
-							class="aligncenter wp-image-351"
+							class="aligncenter"
 							title="подбор декоративной штукатурки"
 							src="./img/podbor-dekorativnoy-shtukaturki.jpg"
 							alt="подбор декоративной штукатурки"
@@ -177,7 +173,7 @@
 					</ul>
 					<p>
 						<img
-							class="aligncenter wp-image-354"
+							class="aligncenter"
 							title="услуга мастера по подбору штукатурки"
 							src="./img/usluga-mastera-po-podboru-768x417.jpeg"
 							alt="услуга мастера по подбору штукатурки"
@@ -248,15 +244,16 @@
 		</div>
 
 		<a href="#to_nav" class="totop cd-is-visible"><i class="fa fa-angle-up"></i></a>
+		<script>
+			$("a[href='#to_nav']").on('click', function (event) {
+				$([document.documentElement, document.body]).animate(
+					{
+						scrollTop: $('.page-template-default').offset().top,
+					},
+					500
+				);
+			});
+		</script>
+		<script src="../../js/mobileMenu.js"></script>
 	</body>
-	<script>
-		$("a[href='#to_nav']").on('click', function (event) {
-			$([document.documentElement, document.body]).animate(
-				{
-					scrollTop: $('.page-template-default').offset().top,
-				},
-				500
-			);
-		});
-	</script>
 </html>

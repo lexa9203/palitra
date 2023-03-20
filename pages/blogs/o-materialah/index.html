@@ -24,42 +24,39 @@
 		></script>
 		<link rel="stylesheet" href="../../../css/font-awesome.min.css" />
 	</head>
-	<body class="single single-post postid-419 single-format-standard">
+	<body class="single single-post single-format-standard">
 		<div class="nav" style="visibility: visible">
 			<div class="container">
 				<a class="logo" href="../../../index.html" title="На главную"></a>
 
-				<nav id="menu" class="menu">
-					<div class="menu-verhnee-menyu-container">
-						<ul id="menu-verhnee-menyu" class="menu">
+				<div class="spinner-master">
+					<input type="checkbox" id="spinner-form" />
+					<label for="spinner-form" class="spinner-spin">
+						<div class="spinner diagonal part-1"></div>
+						<div class="spinner horizontal"></div>
+						<div class="spinner diagonal part-2"></div>
+					</label>
+				</div>
+				<nav class="menu" id="menu">
+					<div>
+						<ul class="menu">
 							<li class="gohome">
 								<a href="../../../index.html"
 									><i class="fa fa-home"></i> <span>Главная</span></a
 								>
 							</li>
-							<li
-								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"
-							>
+							<li>
 								<a href="../../../index.html#services">Услуги</a>
 							</li>
-							<li
-								id="menu-item-282"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"
-							>
+							<li>
 								<a href="../../shema-rabotyi-po-naneseniyu-shtukaturki/index.html"
 									>Схема работы</a
 								>
 							</li>
-							<li
-								id="menu-item-375"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-375"
-							>
+							<li>
 								<a href="../../catalog-products/index.html">Каталог товаров</a>
 							</li>
-							<li
-								id="menu-item-389"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-389"
-							>
+							<li>
 								<a href="../../catalog-effects/index.html">Каталог эффектов</a>
 							</li>
 						</ul>
@@ -76,17 +73,17 @@
 
 		<div class="container">
 			<div class="breadcrumbs">
-				<div class="kama_breadcrumbs">
+				<div>
 					<span
 						><a href="../../../index.html"><span>Главная</span></a></span
-					><span class="kb_sep"> › </span>
+					><span> › </span>
 					<span
 						><a href="../index.html"><span>Статьи</span></a></span
-					><span class="kb_sep"> › </span> <span class="kb_title">О материалах</span>
+					><span> › </span> <span>О материалах</span>
 				</div>
 			</div>
 
-			<div class="posthumb">
+			<div>
 				<img width="100%" src="./img/o-materialah.jpg" alt="О материалах" />
 			</div>
 
@@ -117,7 +114,7 @@
 						<h2>Декоративные краски</h2>
 						<p>
 							<img
-								class="aligncenter size-full wp-image-420"
+								class="aligncenter"
 								src="./img/dekorativnye-kraski.jpg"
 								alt="декоративные краски"
 								width="1024"
@@ -156,7 +153,7 @@
 						<h2>Фактурные штукатурки</h2>
 						<p>
 							<img
-								class="aligncenter size-full wp-image-424"
+								class="aligncenter"
 								src="./img/fakturnaya-shtukaturka.jpg"
 								alt="фактурная штукатурка"
 								width="1199"
@@ -271,7 +268,6 @@
 											height="160"
 											src="../kolerovka-dekorativnyh-shtukaturok-i-krasok/img/dekorativnaya-shtukaturka-nizhnij-novgorod-250x250.jpg"
 											alt="Декоративная штукатурка Нижний Новгород"
-											class="wpp-thumbnail wpp_cached_thumb wpp_featured"
 										/>
 										<p>
 											Декоративная штукатурка Нижний Новгород<br /><small
@@ -288,7 +284,6 @@
 											height="160"
 											src="../kolerovka-dekorativnyh-shtukaturok-i-krasok/img/venetsianskaya-shtukaturka-nizhniy-novgorod-250x250.jpg"
 											alt="Венецианская штукатурка Нижний Новгород"
-											class="wpp-thumbnail wpp_cached_thumb wpp_featured"
 										/>
 										<p>
 											Венецианская штукатурка Нижний Новгород<br /><small
@@ -305,7 +300,6 @@
 											height="160"
 											src="../kolerovka-dekorativnyh-shtukaturok-i-krasok/img/kolerovka-250x250.jpg"
 											alt="Колеровка декоративных штукатурок и красок"
-											class="wpp-thumbnail wpp_cached_thumb wpp_featured"
 										/>
 										<p>
 											Колеровка декоративных штукатурок и красок<br /><small
@@ -322,7 +316,6 @@
 											height="160"
 											src="../kolerovka-dekorativnyh-shtukaturok-i-krasok/img/o-materialah-250x250.jpg"
 											alt="О материалах"
-											class="wpp-thumbnail wpp_cached_thumb wpp_featured"
 										/>
 										<p>
 											О материалах<br /><small
@@ -363,15 +356,16 @@
 		</div>
 
 		<a href="#to_nav" class="totop cd-is-visible"><i class="fa fa-angle-up"></i></a>
+		<script>
+			$("a[href='#to_nav']").on('click', function (event) {
+				$([document.documentElement, document.body]).animate(
+					{
+						scrollTop: $('.single-format-standard').offset().top,
+					},
+					500
+				);
+			});
+		</script>
+		<script src="../../../js/mobileMenu.js"></script>
 	</body>
-	<script>
-		$("a[href='#to_nav']").on('click', function (event) {
-			$([document.documentElement, document.body]).animate(
-				{
-					scrollTop: $('.single-format-standard').offset().top,
-				},
-				500
-			);
-		});
-	</script>
 </html>
