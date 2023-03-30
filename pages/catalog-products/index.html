@@ -29,13 +29,32 @@
 		<div class="nav" style="visibility: visible">
 			<div class="container">
 				<a class="logo" href="../../index.html" title="На главную"></a>
-				<div class="spinner-master">
-					<input type="checkbox" id="spinner-form" />
-					<label for="spinner-form" class="spinner-spin">
-						<div class="spinner diagonal part-1"></div>
-						<div class="spinner horizontal"></div>
-						<div class="spinner diagonal part-2"></div>
-					</label>
+				<div class="burger-menu">
+					<a class="burger-menu_button spinner-master" style="margin-top: 0">
+						<span class="burger-menu_lines"></span>
+					</a>
+					<nav class="burger-menu_nav">
+						<a class="burger-menu_link" href="../../index.html">Главная</a>
+						<a class="burger-menu_link" href="../../index.html#services">Услуги</a>
+						<a
+							class="burger-menu_link"
+							href="../shema-rabotyi-po-naneseniyu-shtukaturki/index.html"
+							>Схема работы</a
+						>
+						<a class="burger-menu_link" href="../catalog-products/index.html"
+							>Каталог товаров</a
+						>
+						<a class="burger-menu_link" href="../catalog-effects/index.html"
+							>Каталог эффектов</a
+						>
+						<div class="burger-menu_link">
+							<div class="burger-tel">
+								<a href="tel:+79524442434">+7 (952) 444-24-34</a>
+							</div>
+							<div class="burger-addr">Ул.Родионова</div>
+						</div>
+					</nav>
+					<div class="burger-menu_overlay"></div>
 				</div>
 				<nav class="menu" id="menu">
 					<div>
@@ -83,7 +102,147 @@
 			<div class="row">
 				<div class="post product-post">
 					<div class="catalog-products">
-						<div class="filters">
+						<div class="filters-mobile">
+							<div>
+								<span class="filter-btn">Фильтр</span>
+								<span class="reset-filter-btn">Сбросить фильтр</span>
+							</div>
+							<div class="filter-group-mobile">
+								<div class="close-btn">&#x2716;</div>
+								<div class="filter-group-item filter-header">
+									<span> Вид </span>
+								</div>
+								<div class="filter-group-item filter-content">
+									<div class="filter" data-filter="view" data-value="kirpich">
+										<span>Кирпич</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="mramorino">
+										<span>Марморино</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="velyur">
+										<span>Велюр</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="perlamutrovaya">
+										<span>Перламутровая</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="uzory">
+										<span>Узоры</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="two-colors">
+										<span>Два цвета</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="loft">
+										<span>Лофт</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="kamen">
+										<span>Камень</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="shelk">
+										<span>Шелк</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="beton">
+										<span>Бетон</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="travertin">
+										<span>Травертин</span>
+									</div>
+									<div class="filter" data-filter="view" data-value="pesok">
+										<span>Песок</span>
+									</div>
+								</div>
+								<div class="filter-group-item filter-header">
+									<span> Назначение </span>
+								</div>
+								<div class="filter-group-item filter-content">
+									<div class="filter" data-filter="purpose" data-value="sleeping">
+										<span>Спальная/Детская</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="bathroom">
+										<span>Ванная/Туалет</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="corridor">
+										<span>Коридор/Прихожая</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="kitchen">
+										<span>Кухня</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="balcony">
+										<span>Балкон</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="ceiling">
+										<span>Потолок</span>
+									</div>
+									<div class="filter" data-filter="purpose" data-value="room">
+										<span>Комната/Гостинная/Зал</span>
+									</div>
+								</div>
+								<div class="filter-group-item filter-header">
+									<span>Материалы </span>
+								</div>
+								<div class="filter-group-item filter-content controls">
+									<div
+										class="filter"
+										data-filter="materials"
+										data-value="decorative-paints"
+									>
+										<span>Декоративные краски</span>
+									</div>
+									<div
+										class="filter"
+										data-filter="materials"
+										data-value="components-MICROCEMENTO"
+									>
+										<span>Компоненты MICROCEMENTO</span>
+									</div>
+									<div
+										class="filter"
+										data-filter="materials"
+										data-value="venetian-plaster"
+									>
+										<span>Веницианская штукатурка</span>
+									</div>
+									<div
+										class="filter"
+										data-filter="materials"
+										data-value="textured-coatings"
+									>
+										<span>Фактурные покрытия</span>
+									</div>
+									<div class="filter" data-filter="materials" data-value="finishes">
+										<span>Финишные покрытия</span>
+									</div>
+									<div
+										class="filter"
+										data-filter="materials"
+										data-value="preparatory-materials"
+									>
+										<span>Подготовительные материалы</span>
+									</div>
+								</div>
+
+								<div class="filter-group-item filter-header">
+									<span> Инструменты </span>
+								</div>
+								<div class="filter-group-item filter-content">
+									<div class="filter" data-filter="tools" data-value="all">
+										<span>Все инструменты</span>
+									</div>
+									<div class="filter" data-filter="tools" data-value="spatulas">
+										<span>Кельмы и шпатели</span>
+									</div>
+									<div class="filter" data-filter="tools" data-value="decorative-tools">
+										<span>Декоративные инструменты</span>
+									</div>
+									<div class="filter" data-filter="tools" data-value="protected">
+										<span>Подготовка и защита</span>
+									</div>
+									<div class="filter" data-filter="tools" data-value="brushes">
+										<span>Кисти и валики</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filters-desktop">
 							<div class="filter-group-item filter-header all-catalog filter selected">
 								<span> Каталог товаров </span>
 							</div>

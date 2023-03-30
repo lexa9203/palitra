@@ -742,6 +742,10 @@ const filters = document.querySelectorAll('.filter');
 const productsWrap = document.querySelector('.products');
 const productTemplate = document.querySelector('#product-template').content;
 const headerFilters = document.querySelectorAll("[data-name='spoiler-title']");
+const filterBtn = document.querySelector('.filter-btn');
+const filtersMenu = document.querySelector('.filter-group-mobile');
+const closeBtn = document.querySelector('.close-btn');
+const resetBtn = document.querySelector('.reset-filter-btn');
 
 function renderProducts(products) {
 	productsWrap.textContent = '';
@@ -804,13 +808,34 @@ filters.forEach(el => {
 		const currentFilter = el.dataset.filter;
 		const currentFilterValue = el.dataset.value;
 		filter(currentFilter, currentFilterValue, el);
+		filtersMenu.classList.remove('filter-group-mobile-active');
+		body.style.overflow = 'visible';
+		resetBtn.style.display = 'inline';
 	});
+});
+
+resetBtn.addEventListener('click', () => {
+	renderProducts(products);
+	resetBtn.style.display = 'none';
+	filters.forEach(el => {
+		el.classList.remove('selected');
+	});
+});
+
+filterBtn.addEventListener('click', () => {
+	filtersMenu.classList.add('filter-group-mobile-active');
+	body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+	filtersMenu.classList.remove('filter-group-mobile-active');
+	body.style.overflow = 'visible';
 });
 
 function pagination() {
 	var items = $('.list-wrapper .list-item');
 	var numItems = items.length;
-	var perPage = 15;
+	var perPage = 18;
 
 	items.slice(perPage).hide();
 	$('#pagination-container').pagination({
