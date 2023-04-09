@@ -50,6 +50,10 @@
 	margin-bottom: -1px;
 }
 
+.filter-group-item:last-child {
+	padding-bottom: 50px;
+}
+
 .filter-header {
 	font-weight: 700;
 	display: flex;
@@ -220,6 +224,7 @@
 	-moz-transition: 0.4s;
 	-o-transition: 0.4s;
 	transition: 0.4s;
+	overflow-x: hidden;
 }
 
 .filter-group-mobile > .filter-group-item {

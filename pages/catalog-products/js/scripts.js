@@ -820,6 +820,7 @@ resetBtn.addEventListener('click', () => {
 	filters.forEach(el => {
 		el.classList.remove('selected');
 	});
+	pagination();
 });
 
 filterBtn.addEventListener('click', () => {

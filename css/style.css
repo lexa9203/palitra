@@ -4230,6 +4230,7 @@ yatag {
 		top: 0 !important;
 		padding: 0;
 	}
+
 	.container {
 		padding: 0 10px !important;
 		overflow-x: hidden;
@@ -5645,9 +5646,9 @@ Author URI: http://roxxi.ru/
 }
 
 .burger-menu_link {
-	padding: 18px 35px;
+	padding: 14px 30px;
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -5692,4 +5693,31 @@ Author URI: http://roxxi.ru/
 	.nav .menu {
 		display: none;
 	}
+}
+
+@media (max-width: 500px) {
+	h2 {
+		font-size: 32px;
+	}
+	.burger-menu_nav {
+		width: 100%;
+	}
+}
+.burger-close-btn {
+	position: absolute;
+	right: 40px;
+	top: 40px;
+}
+
+#gallery-1 {
+	margin: auto;
+}
+#gallery-1 .gallery-item {
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	width: 33%;
+}
+#gallery-1 img {
+	border: 2px solid #cfcfcf;
 }
