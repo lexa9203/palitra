@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детальная страница</title>
+</head>
+<body>
+    <script type="module">
+        // import { EFFECTS } from './catalog-effects/constants/effects.js'
+        // console.log(EFFECTS.filter(el => el.link === window.location.search.slice(1)))
+        const body = document.querySelector('body');
+        body.textContent = decodeURI(window.location.search.slice(1)) 
+
+        console.log(decodeURI(window.location.search.slice(1)))
+    </script>
+</body>
+</html>

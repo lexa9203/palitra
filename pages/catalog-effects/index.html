@@ -18,13 +18,13 @@
 		>
 		<link rel="stylesheet" href="../../css/font-awesome.min.css">
 		<link rel="stylesheet" href="./css/foogallery.min.css">
+		<link rel="stylesheet" href="./css/style.css">
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
 			integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -106,149 +106,295 @@
 			</div>
 
 			<h1 class="title">Каталог эффектов</h1>
+			<div class="effect_wrapper post">
 
-			<div class="row">
-				<div id="rec" class="post">
-					<div
-						class="eff foogallery foogallery-container foogallery-default foogallery-lightbox-none fg-gutter-10 fg-center fg-default fg-light fg-border-thin fg-shadow-outline fg-loading-default fg-hover-scale fg-caption-hover fg-hover-instant fg-hover-zoom"
-					>
-						<div class="fg-item">
-							<a href="./img/usluga-mastera-po-podboru.jpeg" data-fancybox="effects">
-								<img
-									alt="услуга мастера по подбору штукатурки"
-									src="./img/usluga-mastera-po-podboru.jpeg"
-								>
-							</a>
+			
+			<div class="filters">
+				<div class="filters-mobile">
+					<div>
+						<span class="filter-btn">Фильтр</span>
+						<span class="reset-filter-btn">Сбросить фильтр</span>
+					</div>
+					<div class="filter-group-mobile">
+						<div class="close-btn">&#x2716;</div>
+						<div class="filter-group-item filter-header">
+							<span> Эффекты </span>
 						</div>
-						<div class="fg-item">
-							<a href="./img/venetsianskaya-shtukaturka-kupit.jpg" data-fancybox="effects">
-								<img
-									alt="купить венецианскую штукатурку"
-									src="./img/venetsianskaya-shtukaturka-kupit.jpg"
-								>
-							</a>
+						<div class="filter-group-item filter-content">
+							<div class="filter" data-filter="effect" data-value="cloth">
+								<span>Ткань</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="barahat">
+								<span>Бархат</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="silk">
+								<span>Шелк</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="perlamutrovaya">
+								<span>Перламутровый песок</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="textured">
+								<span>Фактурные штукатурки</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="beton">
+								<span>Бетон</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="velour">
+								<span>Велюр</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="kamen">
+								<span>Камень</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="brick">
+								<span>Кирпич</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="canvas">
+								<span>Холст</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="mat-pesok">
+								<span>Матовый песок</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="loft">
+								<span>Лофт</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="natural">
+								<span>Природные</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="classic">
+								<span>Классические</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="metal">
+								<span>Металл</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="ethnic">
+								<span>Этнические</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="venetian">
+								<span>Венецианская штукатурка</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="art-beton">
+								<span>Арт-бетон</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="imitation-fabric">
+								<span>Имитация ткани</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="pearl">
+								<span>Перламутровый эффект</span>
+							</div>
+							<div class="filter" data-filter="effect" data-value="stencils">
+								<span>Трафареты</span>
+							</div>
 						</div>
-						<div class="fg-item">
-							<a href="./img/veneczianskaya-shtukaturka.jpg" data-fancybox="effects">
-								<img
-									alt="Венецианская штукатурка Нижний Новгород"
-									src="./img/veneczianskaya-shtukaturka.jpg"
-								>
-							</a>
+						<div class="filter-group-item filter-header">
+							<span> Применение </span>
 						</div>
-						<div class="fg-item">
-							<a href="./img/uslugi-mastera-shtukatura.jpg" data-fancybox="effects">
-								<img
-									alt="услуги мастера штукатура"
-									src="./img/uslugi-mastera-shtukatura.jpg"
-								>
-							</a>
+						<div class="filter-group-item filter-content">
+							<div class="filter" data-filter="application" data-value="sleeping">
+								<span>Жилые и офисные с нормальной нагрузкой</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="public">
+								<span>Общественные с повышенной нагрузкой</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="kitchen">
+								<span>Кухни и ванные комнаты без прямого воздействия воды</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="water">
+								<span>Влажные помещения с прямым воздействием воды</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="facades">
+								<span>Фасады</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="living-room">
+								<span>Гостиная</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="corridor">
+								<span>Коридоры, прихожие, холлы</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="floor">
+								<span>Полы, лестницы</span>
+							</div>
+							<div class="filter" data-filter="application" data-value="nursery">
+								<span>Детская</span>
+							</div>
 						</div>
-						<div class="fg-item">
-							<a href="./img/velur3d.jpg" data-fancybox="effects">
-								<img alt="Велюр 3d" src="./img/velur3d.jpg">
-							</a>
+						<div class="filter-group-item filter-header">
+							<span>Стоимость </span>
 						</div>
-						<div class="fg-item">
-							<a href="./img/dekorativnaya-shtukaturka.jpg" data-fancybox="effects">
-								<img
-									alt="Декоративная штукатурка Нижний Новгород"
-									src="./img/dekorativnaya-shtukaturka.jpg"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9996.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9996.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_0009.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_0009.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_0001.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_0001.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_0003.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_0003.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_0022.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_0022.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-									title="effect"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9971.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9971.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9953.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9953.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9963.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9963.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_0052.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_0052.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9965.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9965.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
-						</div>
-						<div class="fg-item">
-							<a href="./img/IMG_9970.jpg" data-fancybox="effects">
-								<img
-									src="./img/IMG_9970.jpg"
-									alt="Декоративная штукатурка Нижний Новгород"
-								>
-							</a>
+						<div class="filter-group-item filter-content controls">
+							<div
+								class="filter"
+								data-filter="price"
+								data-value="cheap"
+							>
+								<span>до 500 руб.</span>
+							</div>
+							<div
+								class="filter"
+								data-filter="price"
+								data-value="middle"
+							>
+								<span>от 500 руб. до 1000 руб.</span>
+							</div>
+							<div
+								class="filter"
+								data-filter="price"
+								data-value="expensive"
+							>
+								<span>> 1000 руб.</span>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="filters-desktop">
+						<div class="filter-group-item filter-header" data-name="spoiler-title">
+							<span> Эффекты </span>
+							<img
+							src="./img/free-arrow-down-icon-3101-thumb.png"
+							alt="arrow"
+							class="arrow"
+						>
+					</div>
+					<div class="filter-group-item filter-content spoiler-body">
+						<div class="filter" data-filter="effect" data-value="all">
+							<span>Показать все</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="cloth">
+							<span>Ткань</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="barahat">
+							<span>Барахат</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="silk">
+							<span>Шелк</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="perlamutrovaya">
+							<span>Перламутровый песок</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="textured">
+							<span>Фактурные штукатурки</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="beton">
+							<span>Бетон</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="velour">
+							<span>Велюр</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="kamen">
+							<span>Камень</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="brick">
+							<span>Кирпич</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="canvas">
+							<span>Холст</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="mat-pesok">
+							<span>Матовый песок</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="loft">
+							<span>Лофт</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="natural">
+							<span>Природные</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="classic">
+							<span>Класические</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="metal">
+							<span>Металл</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="ethnic">
+							<span>Этнические</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="venetian">
+							<span>Венецианская штукатурка</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="art-beton">
+							<span>Арт-бетон</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="imitation-fabric">
+							<span>Имитация ткани</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="pearl">
+							<span>Перламутровый эффект</span>
+						</div>
+						<div class="filter" data-filter="effect" data-value="stencils">
+							<span>Трафареты</span>
+						</div>
+					</div>
+					<div class="filter-group-item filter-header" data-name="spoiler-title">
+						<span> Применение </span>
+						<img
+							src="./img/free-arrow-down-icon-3101-thumb.png"
+							alt="arrow"
+							class="arrow"
+						>
+					</div>
+					<div class="filter-group-item filter-content spoiler-body">
+						<div class="filter" data-filter="application" data-value="all">
+							<span>Показать все</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="sleeping">
+							<span>Жилые и офисные с нормальной нагрузкой</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="public">
+							<span>Общественные с повышенной нагрузкой</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="kitchen">
+							<span>Кухни и ванные комнаты без прямого воздействия воды</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="water">
+							<span>Влажные помещения с прямым воздействием воды</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="facades">
+							<span>Фасады</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="living-room">
+							<span>Гостиная</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="corridor">
+							<span>Коридоры, прихожие, холлы</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="floor">
+							<span>Полы, лестницы</span>
+						</div>
+						<div class="filter" data-filter="application" data-value="nursery">
+							<span>Детская</span>
+						</div>
+					</div>
+
+					<div class="filter-group-item filter-header" data-name="spoiler-title">
+						<span>Стоимость за 1 м<sup>2</sup> </span>
+						<img
+							src="./img/free-arrow-down-icon-3101-thumb.png"
+							alt="arrow"
+							class="arrow"
+						>
+					</div>
+					<div class="filter-group-item filter-content spoiler-body controls">
+						<div class="filter" data-filter="price" data-value="all">
+							<span>Показать все</span>
+						</div>
+						<div class="filter" data-filter="price" data-value="cheap">
+							<span>до 500 руб.</span>
+						</div>
+						<div class="filter" data-filter="price" data-value="middle">
+							<span>от 500 руб. до 1000 руб.</span>
+						</div>
+						<div
+							class="filter"
+							data-filter="price"
+							data-value="expensive"
+						>
+							<span>> 1000 руб.</span>
+						</div>
+					</div></div>
 			</div>
+				<div class="effects">
+						
+				</div>
+			</div>
+			<div id="pagination-container"></div>
 		</div>
 
 		<div class="copyright-wrapper">
@@ -269,11 +415,27 @@
 			</div>
 		</div>
 
+		<template id="effect-template">
+				<div class="effect" >
+					<div class="effect_img">
+						<img class="effect_img_prev" src="" alt="">
+						<img class="effect_img_main" src="" alt="">
+					</div>
+					<div class="effect_info">
+						<div class="effect_info__top">
+							<div class="effect_title"></div>
+							<div class="effect_price"><span>От </span><span></span><span> руб/м</span><sup>2</sup></div>
+						</div>
+						<div class="effect_info__bottom">
+							<div class="effect_about"></div>
+							<button class="effect_btn"><a href="./index.html">Подробнее</a></button>
+						</div>
+					</div>
+				</div>
+		</template>
+
 		<a href="#to_nav" class="totop cd-is-visible"><i class="fa fa-angle-up"></i></a>
 		<script>
-			Fancybox.bind('[data-fancybox="effects"]', {
-				// Your custom options
-			});
 			$("a[href='#to_nav']").on('click', function (event) {
 				$([document.documentElement, document.body]).animate(
 					{
@@ -283,6 +445,9 @@
 				);
 			});
 		</script>
-		<script src="../../js/mobileMenu.js"></script>
+		<script type="module" src="../../js/mobileMenu.js"></script>
+		<script type="module" src="./js/simplePagination.js"></script>
+		<script type="module" src="./js/script.js"></script>
+
 	</body>
 </html>
