@@ -27,9 +27,9 @@
 }
 
 .effect_title {
-    font-size: 24px;
+    font-size: 22px;
 	max-width: 68%;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .effect_price {
@@ -267,12 +267,6 @@
 	}
 }
 
-@media (max-width: 1000px) {
-	.product-post {
-		padding: 40px 20px;
-	}
-}
-
 .filter-btn {
 	padding-left: 10px;
 	font-size: 18px;
@@ -361,5 +355,48 @@
 
 .filter-group-mobile > .filter-group-item {
 	color: white;
+}
+
+@media (max-width: 450px) {
+	.effects {
+		padding: 10px 0;
+	}
+
+	.effect_price {
+		font-size: 14px;
+	}
+
+	.effect_title {
+		font-size: 20px;
+	}
+
+	.effect_about {
+		line-height: 16px;
+	}
+}
+
+@media (max-width: 450px) {
+	.effect_img {
+		height: 45%;
+		max-height: 45%;
+		min-height: 45%;
+	}
+
+	.effect_info {
+		height: 50%;
+	}
+
+	.effect_info__top, .effect_info__bottom {
+		flex-direction: column;
+	}
+
+	.effect_title {
+		max-width: 100%;
+		padding-bottom: 5px;
+	}
+
+	.container {
+		padding: 0 0px !important;
+	}
 }
 

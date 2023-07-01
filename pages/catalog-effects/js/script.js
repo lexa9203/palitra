@@ -22,7 +22,7 @@ function renderEffects(effects) {
 		clonedEffect.children[0].children[1].src = el.img_main;
 		clonedEffect.children[1].children[0].children[0].textContent = el.title;
 		clonedEffect.children[1].children[0].children[1].children[1].textContent = el.value;
-        clonedEffect.children[1].children[1].children[0].textContent = el.info.split(' ').length > 20 && el.info.length > 100 ? el.info.split(' ').slice(0,20).join(' ') + ' ...' : el.info;
+        clonedEffect.children[1].children[1].children[0].textContent = el.info.split(' ').length > 20 && el.info.length > 100 ? el.info.split(' ').slice(0,20).join(' ') + '...' : el.info;
 		// clonedEffect.children[1].children[1].children[1].children[0].href = 'https://www.freecodecamp.org/learn'
 
         clonedEffect.children[0].addEventListener('mouseenter', () => {
