@@ -1,19 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Детальная страница</title>
-</head>
-<body>
-    <script type="module">
-        // import { EFFECTS } from './catalog-effects/constants/effects.js'
-        // console.log(EFFECTS.filter(el => el.link === window.location.search.slice(1)))
-        const body = document.querySelector('body');
-        body.textContent = decodeURI(window.location.search.slice(1)) 
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../../css/plugins.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="../../css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-        console.log(decodeURI(window.location.search.slice(1)))
-    </script>
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	</head>
+	<body style="margin: 0" class="page-template page-template-page-effecto page">
+		<div class="nav" style="visibility: visible">
+			<div class="container">
+				<a class="logo" href="../../index.html" title="На главную"></a>
+				<div class="burger-menu">
+					<a class="burger-menu_button spinner-master" style="margin-top: 0">
+						<span class="burger-menu_lines"></span>
+					</a>
+					<nav class="burger-menu_nav">
+						<a class="burger-close-btn">
+							<span class="burger-menu_lines"></span>
+						</a>
+						<a class="burger-menu_link" href="../../index.html">Главная</a>
+						<a class="burger-menu_link" href="../../index.html#services">Услуги</a>
+						<a
+							class="burger-menu_link"
+							href="../shema-rabotyi-po-naneseniyu-shtukaturki/index.html"
+							>Схема работы</a
+						>
+						<a class="burger-menu_link" href="../catalog-products/index.html"
+							>Каталог товаров</a
+						>
+						<a class="burger-menu_link" href="../catalog-effects/index.html"
+							>Каталог эффектов</a
+						>
+						<div class="burger-menu_link">
+							<div class="burger-tel">
+								<a href="tel:+79524442434">+7 (952) 444-24-34</a>
+							</div>
+							<div class="burger-addr">Ул.Родионова</div>
+						</div>
+					</nav>
+					<div class="burger-menu_overlay"></div>
+				</div>
+				<nav class="menu" id="menu">
+					<div>
+						<ul class="menu">
+							<li class="gohome">
+								<a href="../../index.html"
+									><i class="fa fa-home"></i> <span>Главная</span></a
+								>
+							</li>
+							<li>
+								<a href="../../index.html#services">Услуги</a>
+							</li>
+							<li>
+								<a href="../shema-rabotyi-po-naneseniyu-shtukaturki/index.html"
+									>Схема работы</a
+								>
+							</li>
+							<li>
+								<a href="../catalog-products/index.html">Каталог товаров</a>
+							</li>
+							<li class="menu-item page_item page-item-383">
+								<a href="../catalog-effects/index.html" aria-current="page"
+									>Каталог эффектов</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="hright">
+						<div class="htel">
+							<a href="tel:+79524442434">+7 (952) 444-24-34</a>
+						</div>
+						<div class="haddr">Ул.Родионова</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container" style="max-width: 1170px">
+			<div class="breadcrumbs">
+				<div>
+					<span
+						><a href="../../index.html"><span>Главная</span></a></span
+					><span> › </span>
+					<a href="../catalog-effects/index.html"><span>Каталог эффектов</span></a
+					><span> › </span><span class="nav_effect"></span>
+				</div>
+			</div>
+
+			<h1 class="title"></h1>
+			<div class="post">
+				<div class="effect_main">
+					<div class="effect_main_img">
+						<div class="swiper" style="width: 100%">
+							<div class="swiper-wrapper"></div>
+
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="effect_about_wrapper">
+						<div class="effect_about_price">От <span></span> руб/м2</div>
+						<div class="effect_about_text"></div>
+					</div>
+				</div>
+
+				<div class="steps">
+					<h3>Как получить эффект. Шаги по нанесению.</h3>
+					<div class="steps__wrapper"></div>
+				</div>
+				<div class="video">
+					<h4 class="video_title" style="text-align: center"></h4>
+					<div class="video_wrapper">
+						<iframe
+							width="100%"
+							height="100%"
+							src=""
+							title="YouTube video player"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+				<hr class="divider" />
+				<div class="similar">
+					<h4 style="text-align: center">Похожие эффекты</h4>
+					<div class="similar_effects"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="copyright-wrapper">
+			<div class="copyright">
+				<p>© 2023 Palitra.store</p>
+
+				<p class="socials">
+					<a href="https://www.instagram.com/palitra.store/" target="_blank"
+						><i class="fa fa-instagram"></i
+					></a>
+
+					<a href="https://vk.com/decornn" target="_blank"><i class="fa fa-vk"></i></a>
+
+					<a href="https://www.youtube.com/channel/UCm9woIO8pwWQ44AyiHmRv0w" target="_blank"
+						><i class="fa fa-youtube"></i
+					></a>
+				</p>
+			</div>
+		</div>
+		<template id="step-template">
+			<div class="step">
+				<div class="label"></div>
+				<div>
+					<div class="step_title"></div>
+					<div class="step_instruction"></div>
+					<div class="step_consumption">Расход: <span></span> л/кв.м.</div>
+					<div class="step_img">
+						<img src="./img/Primer.png" alt="Primer" />
+						<p style="line-height: 24px"></p>
+					</div>
+				</div>
+				<div class="step_info">
+					<div class="step_tools">
+						<div class="tool"></div>
+						<p class="tools_name"></p>
+					</div>
+					<div class="step_time">
+						<img src="./img/clock.png" alt="время" />
+						<div class="time_text">
+							Полное высыхание слоя - не менее <br />
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<template id="similar-effect-template">
+			<div class="effect">
+				<div class="effect_img">
+					<img class="effect_img_prev" src="" alt="" />
+					<img class="effect_img_main" src="" alt="" />
+				</div>
+				<div class="effect_info">
+					<div class="effect_info__top">
+						<div class="effect_title"></div>
+						<div class="effect_price">
+							<span>От </span><span></span><span> руб/м</span><sup>2</sup>
+						</div>
+					</div>
+					<div class="effect_info__bottom">
+						<div class="effect_about"></div>
+						<a href="./index.html?"><button class="effect_btn">Подробнее</button></a>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<script type="module" src="../../js/mobileMenu.js"></script>
+		<script type="module">
+			import { EFFECTS } from './constants/effects.js';
+			const effectPath = window.location.search.slice(1);
+			const [findedEffect] = EFFECTS.filter(el => el.link === effectPath);
+			console.log(findedEffect);
+
+			if (!effectPath) {
+				window.location.replace('../catalog-effects/index.html');
+			}
+
+			//TODO: страница не найденного эфекта
+			if (!findedEffect) {
+				document.body.textContent = 'Эффект не найден';
+			}
+
+			const title = document.querySelector('.title');
+			const navEffect = document.querySelector('.nav_effect');
+			const effectPrice = document.querySelector('.effect_about_price > span');
+			const effectAbout = document.querySelector('.effect_about_text');
+			const stepEffect = document.querySelector('#step-template').content;
+			const similarEffect = document.querySelector('#similar-effect-template').content;
+			const stepsWrap = document.querySelector('.steps__wrapper');
+			const steps = document.querySelector('.steps');
+			const videoTitle = document.querySelector('.video_title');
+			const videoWrap = document.querySelector('.video');
+			const video = document.querySelector('iframe');
+			const similarEffectsWrap = document.querySelector('.similar_effects');
+			const swiperWrapper = document.querySelector('.swiper-wrapper');
+			const similar = document.querySelector('.similar');
+			const divider = document.querySelector('.divider');
+
+			title.textContent = findedEffect.title;
+			navEffect.textContent = findedEffect.title;
+			effectPrice.textContent = findedEffect.value;
+			effectAbout.textContent = findedEffect.info;
+			console.log(!!findedEffect.video);
+			videoTitle.textContent = findedEffect.title;
+			video.src = findedEffect.video;
+
+			if (!findedEffect.video) {
+				videoWrap.style.display = 'none';
+			}
+
+			if (!findedEffect.steps.length) {
+				steps.style.display = 'none';
+			}
+
+			document.title = `${findedEffect.title} эффект декоративной штукатурки Decorazza`;
+
+			findedEffect.img.forEach(el => {
+				const slider = document.createElement('div');
+				slider.style.userSelect = 'none';
+				slider.classList.add('swiper-slide');
+				const img = document.createElement('img');
+				img.src = el.src;
+				img.alt = el.alt;
+				slider.appendChild(img);
+				swiperWrapper.appendChild(slider);
+			});
+
+			function renderSteps(steps) {
+				steps.forEach((step, index) => {
+					const stepWrapper = stepEffect.querySelector('div');
+					const clonedStep = stepWrapper.cloneNode(true);
+					clonedStep.children[0].textContent = index + 1;
+					clonedStep.children[1].children[0].textContent = step.title;
+					clonedStep.children[1].children[1].textContent = step.instruction;
+					if (step.consumption) {
+						clonedStep.children[1].children[2].children[0].textContent = step.consumption;
+					} else {
+						clonedStep.children[1].children[2].style.display = 'none';
+					}
+					clonedStep.children[1].children[3].children[0].src = step.img;
+					clonedStep.children[1].children[3].children[0].alt = step.materialName;
+					clonedStep.children[1].children[3].children[1].textContent = step.materialName;
+
+					if (!step.time) {
+						clonedStep.children[2].children[1].style.display = 'none';
+					}
+					if (!step.toolsName) {
+						clonedStep.children[2].children[0].style.display = 'none';
+					}
+
+					clonedStep.children[2].children[1].children[1].children[1].textContent = step.time;
+					clonedStep.children[2].children[0].children[1].textContent = step.toolsName;
+
+					step.tools.forEach(tool => {
+						const img = document.createElement('img');
+						img.src = tool.img;
+						img.alt = tool.alt;
+
+						clonedStep.children[2].children[0].children[0].appendChild(img);
+					});
+
+					stepsWrap.appendChild(clonedStep);
+				});
+			}
+
+			renderSteps(findedEffect.steps);
+
+			function renderSimilarEffects(similars) {
+				similars.forEach(el => {
+					const similarEffectsWrapper = similarEffect.querySelector('div');
+					const clonedSimilarEffect = similarEffectsWrapper.cloneNode(true);
+
+					console.log(clonedSimilarEffect.children);
+
+					clonedSimilarEffect.children[0].children[0].alt = el.title;
+					clonedSimilarEffect.children[0].children[1].alt = el.title;
+					clonedSimilarEffect.children[0].children[0].src = el.img_prev;
+					clonedSimilarEffect.children[0].children[1].src = el.img_main;
+					clonedSimilarEffect.children[1].children[0].children[0].textContent = el.title;
+					clonedSimilarEffect.children[1].children[0].children[1].children[1].textContent =
+						el.value;
+					clonedSimilarEffect.children[1].children[1].children[0].textContent =
+						el.info.split(' ').length > 40 && el.info.length > 160
+							? el.info.split(' ').slice(0, 40).join(' ') + '...'
+							: el.info;
+					if (el.link) {
+						console.log(clonedSimilarEffect.children[1].children[1].children[1]);
+						clonedSimilarEffect.children[1].children[1].children[1].href += el.link;
+					} else {
+						clonedSimilarEffect.children[1].children[1].children[1].href = '#';
+					}
+					clonedSimilarEffect.children[0].addEventListener('mouseenter', () => {
+						clonedSimilarEffect.children[0].children[0].style.visibility = 'hidden';
+						clonedSimilarEffect.children[0].children[1].style.visibility = 'visible';
+						clonedSimilarEffect.children[0].children[0].style.opacity = '0';
+						clonedSimilarEffect.children[0].children[1].style.opacity = '1';
+					});
+
+					clonedSimilarEffect.children[0].addEventListener('mouseleave', () => {
+						clonedSimilarEffect.children[0].children[0].style.visibility = 'visible';
+						clonedSimilarEffect.children[0].children[1].style.visibility = 'hidden';
+						clonedSimilarEffect.children[0].children[0].style.opacity = '1';
+						clonedSimilarEffect.children[0].children[1].style.opacity = '0';
+					});
+
+					similarEffectsWrap.appendChild(clonedSimilarEffect);
+				});
+			}
+			if (findedEffect.similars.length) {
+				renderSimilarEffects(findedEffect.similars);
+			} else {
+				similar.style.display = 'none';
+				divider.style.display = 'none';
+			}
+
+			const swiper = new Swiper('.swiper', {
+				loop: true,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				autoplay: {
+					delay: 5000,
+				},
+			});
+		</script>
+	</body>
 </html>

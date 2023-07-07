@@ -56,7 +56,7 @@
     background-color: black;
 }
 
-.effect_btn:hover a {
+.effect_btn:hover {
     color: white;
 }
 

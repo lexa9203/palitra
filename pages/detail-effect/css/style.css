@@ -1,0 +1,278 @@
+.effect_main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+.effect_main_img {
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+}
+
+.effect_about_wrapper {
+    width: 45%;
+}
+
+.effect_about_text {
+    font-size: 14px;
+}
+
+.effect_about_price {
+    text-align: end;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: black
+}
+
+.steps__wrapper {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.step {
+    position: relative;
+    padding: 40px;
+    box-shadow: 0px 0px 20px #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.step_img > img {
+    max-width: 110px;
+}
+
+.label {
+    font-size: 40px;
+    color: grey;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: #f7f7f7;
+    box-shadow: 0px 0px 14px #e1e1e1;
+}
+
+.step_title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.step_instruction, .step_consumption {
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.step_img {
+    width: 120px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.step_info {
+    display: flex;
+}
+
+.step_time > img {
+    width: 50px;
+    height: 50px;
+}
+
+.step_tools {
+    width: 60%;
+
+}
+.step_time {
+    display: flex;
+    width: 40%;
+}
+
+.time_text {
+    font-size: 12px;
+}
+.time_text > span {
+    font-weight: 600;
+}
+
+.tool {
+    display: flex;
+    gap: 4px;
+}
+
+.tool > img {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.step_tools .tools_name {
+    font-size: 12px;
+    margin: 0;
+}
+
+.video {
+    margin-bottom: 40px;
+}
+
+.video_wrapper {
+    width:100%; 
+    height: 600px;
+}
+
+.divider {
+    border-bottom: 1px solid #cdcccc;
+}
+
+.similar_effects {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(40%, 1fr));
+	align-content: flex-start;
+	grid-gap: 25px;
+}
+
+.effect {
+    width: 100%; 
+    height: 480px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: start;
+    transition: all 0.5s ease-in-out;
+}
+
+.effect:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px grey;
+}
+
+.effect_title {
+    font-size: 22px;
+	max-width: 68%;
+    line-height: 24px;
+}
+
+.effect_price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.effect_about {
+    opacity: 0.6;
+    font-size: 14px;
+	line-height: 20px;
+}
+
+.effect_btn {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.effect_btn a {
+    color: black;
+}
+
+.effect_btn:hover {
+    background-color: black;
+}
+
+.effect_btn:hover a {
+    color: white;
+}
+
+.effect_img {
+    position: relative;
+    overflow:hidden;
+    width: inherit;
+    height: 55%;
+    max-height: 55%;
+    min-height: 55%;
+    z-index: 1;
+}
+
+.effect_img .effect_img_prev {
+    width:inherit;
+    height:100%;
+    object-fit:cover;
+    transition: .5s ease all;
+}
+
+.effect_img .effect_img_main {
+    transition: 1s ease all;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+	height: 100%;
+}
+
+.effect_img::after {
+    content: '';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background: #e5e5e5;
+    opacity: 0;
+    transition: 0s ease all;
+}
+
+.effect_img:hover .effect_img_main {
+    transform: scale(1.1);
+}
+  
+.effect_img:hover::after {opacity: 0.2;}
+
+.effect_info {
+    padding: 10px ;
+	height: 45%;
+	position: relative;
+}
+
+.effect_info__top,
+.effect_info__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.effect_info__bottom {
+    margin-top: 10px;
+}
+.effect_info__bottom button {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+    opacity: 0.5;
+    transition: all .5s ease-in-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+}

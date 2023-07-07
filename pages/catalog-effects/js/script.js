@@ -15,7 +15,6 @@ function renderEffects(effects) {
 	effects.forEach(el => {
 		const effect = effectTemplate.querySelector('div');
 		const clonedEffect = effect.cloneNode(true);
-		// console.log(clonedEffect.children[1].children[1].children[1].children[0].href)
 		clonedEffect.children[0].children[0].alt = el.title;
 		clonedEffect.children[0].children[1].alt = el.title;
 		clonedEffect.children[0].children[0].src = el.img_prev;
@@ -23,8 +22,11 @@ function renderEffects(effects) {
 		clonedEffect.children[1].children[0].children[0].textContent = el.title;
 		clonedEffect.children[1].children[0].children[1].children[1].textContent = el.value;
         clonedEffect.children[1].children[1].children[0].textContent = el.info.split(' ').length > 20 && el.info.length > 100 ? el.info.split(' ').slice(0,20).join(' ') + '...' : el.info;
-		// clonedEffect.children[1].children[1].children[1].children[0].href = 'https://www.freecodecamp.org/learn'
-
+		if(el.link) {
+			clonedEffect.children[1].children[1].children[1].href += el.link
+		} else {
+			clonedEffect.children[1].children[1].children[1].href = '#'
+		}
         clonedEffect.children[0].addEventListener('mouseenter', () => {
             clonedEffect.children[0].children[0].style.visibility = 'hidden'
             clonedEffect.children[0].children[1].style.visibility = 'visible' 
