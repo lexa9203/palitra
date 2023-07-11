@@ -1,5 +1,4 @@
-import { EFFECTS } from '../constants/effects.js'
-
+import { EFFECTS } from '../constants/effects.js';
 
 const headerFilters = document.querySelectorAll("[data-name='spoiler-title']");
 const filterBtn = document.querySelector('.filter-btn');
@@ -9,6 +8,14 @@ const resetBtn = document.querySelector('.reset-filter-btn');
 const effectTemplate = document.querySelector('#effect-template').content;
 const effectsWrap = document.querySelector('.effects');
 const filters = document.querySelectorAll('.filter');
+
+const currentPage = window.location.hash.split('-')[1];
+
+if (currentPage) {
+	$(function () {
+		$('#pagination-container').pagination('selectPage', currentPage);
+	});
+}
 
 function renderEffects(effects) {
 	effectsWrap.textContent = '';
@@ -21,25 +28,28 @@ function renderEffects(effects) {
 		clonedEffect.children[0].children[1].src = el.img_main;
 		clonedEffect.children[1].children[0].children[0].textContent = el.title;
 		clonedEffect.children[1].children[0].children[1].children[1].textContent = el.value;
-        clonedEffect.children[1].children[1].children[0].textContent = el.info.split(' ').length > 20 && el.info.length > 100 ? el.info.split(' ').slice(0,20).join(' ') + '...' : el.info;
-		if(el.link) {
-			clonedEffect.children[1].children[1].children[1].href += el.link
+		clonedEffect.children[1].children[1].children[0].textContent =
+			el.info.split(' ').length > 20 && el.info.length > 100
+				? el.info.split(' ').slice(0, 20).join(' ') + '...'
+				: el.info;
+		if (el.link) {
+			clonedEffect.children[1].children[1].children[1].href += el.link;
 		} else {
-			clonedEffect.children[1].children[1].children[1].href = '#'
+			clonedEffect.children[1].children[1].children[1].href = '#';
 		}
-        clonedEffect.children[0].addEventListener('mouseenter', () => {
-            clonedEffect.children[0].children[0].style.visibility = 'hidden'
-            clonedEffect.children[0].children[1].style.visibility = 'visible' 
-            clonedEffect.children[0].children[0].style.opacity = '0' 
-            clonedEffect.children[0].children[1].style.opacity = '1' 
-        })
-        
-        clonedEffect.children[0].addEventListener('mouseleave', () => {
-            clonedEffect.children[0].children[0].style.visibility = 'visible'
-            clonedEffect.children[0].children[1].style.visibility = 'hidden' 
-            clonedEffect.children[0].children[0].style.opacity = '1' 
-            clonedEffect.children[0].children[1].style.opacity = '0' 
-        })
+		clonedEffect.children[0].addEventListener('mouseenter', () => {
+			clonedEffect.children[0].children[0].style.visibility = 'hidden';
+			clonedEffect.children[0].children[1].style.visibility = 'visible';
+			clonedEffect.children[0].children[0].style.opacity = '0';
+			clonedEffect.children[0].children[1].style.opacity = '1';
+		});
+
+		clonedEffect.children[0].addEventListener('mouseleave', () => {
+			clonedEffect.children[0].children[0].style.visibility = 'visible';
+			clonedEffect.children[0].children[1].style.visibility = 'hidden';
+			clonedEffect.children[0].children[0].style.opacity = '1';
+			clonedEffect.children[0].children[1].style.opacity = '0';
+		});
 		effectsWrap.appendChild(clonedEffect);
 	});
 }
@@ -103,9 +113,8 @@ function filter(filter, value) {
 	}
 
 	renderEffects(filteredEffects);
-	
+
 	pagination();
-	
 }
 
 function pagination() {
@@ -114,20 +123,16 @@ function pagination() {
 	const perPage = 26;
 
 	items.slice(perPage).hide();
-	
-		$('#pagination-container').pagination({
-			items: numItems,
-			itemsOnPage: perPage,
-			prevText: '&laquo;',
-			nextText: '&raquo;',
-			onPageClick: function (pageNumber) {
-				const showFrom = perPage * (pageNumber - 1);
-				const showTo = showFrom + perPage;
-				items.hide().slice(showFrom, showTo).show();
-			},
-		});
-	
-	
-	
-}
 
+	$('#pagination-container').pagination({
+		items: numItems,
+		itemsOnPage: perPage,
+		prevText: '&laquo;',
+		nextText: '&raquo;',
+		onPageClick: function (pageNumber) {
+			const showFrom = perPage * (pageNumber - 1);
+			const showTo = showFrom + perPage;
+			items.hide().slice(showFrom, showTo).show();
+		},
+	});
+}
