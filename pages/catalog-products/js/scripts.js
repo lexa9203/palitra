@@ -1,4 +1,4 @@
-import { PRODUCTS } from '../constants/products.js'
+import { PRODUCTS } from '../constants/products.js';
 
 const allCatalog = document.querySelector('.all-catalog');
 const filters = document.querySelectorAll('.filter');
@@ -10,13 +10,21 @@ const filtersMenu = document.querySelector('.filter-group-mobile');
 const closeBtn = document.querySelector('.close-btn');
 const resetBtn = document.querySelector('.reset-filter-btn');
 
+const currentPage = window.location.hash.split('-')[1];
+
+if (currentPage) {
+	$(function () {
+		$('#pagination-container').pagination('selectPage', currentPage);
+	});
+}
+
 function renderProducts(products) {
 	productsWrap.textContent = '';
 	products.forEach(el => {
 		const product = productTemplate.querySelector('div');
 		const clonedProduct = product.cloneNode(true);
 		clonedProduct.children[0].alt = el.name;
-		// clonedProduct.children[1].children[2].querySelector('.product_detail-btn').href += el.name;
+		clonedProduct.children[1].querySelector('.product_detail-btn').href += el.link;
 		clonedProduct.children[0].src = el.img;
 		clonedProduct.children[1].children[0].textContent = el.name;
 		clonedProduct.children[1].children[1].querySelector('.price').textContent = el.price;

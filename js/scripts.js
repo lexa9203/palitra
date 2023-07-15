@@ -9,7 +9,7 @@ const swiper = new Swiper('.swiper', {
 const menu = document.querySelector('.navigation');
 
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset > 50) {
+	if (window.scrollY > 50) {
 		menu.classList.add('fixed');
 	} else {
 		menu.classList.remove('fixed');

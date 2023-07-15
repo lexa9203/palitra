@@ -6,9 +6,13 @@ if (!effectPath) {
 	window.location.replace('../catalog-effects/index.html');
 }
 
-//TODO: страница не найденного эфекта
 if (!findedEffect) {
-	document.body.textContent = 'Эффект не найден';
+	document.title = 'Страница не найдена';
+	document.body.style.height = 'calc(100% - 100px)';
+	document.querySelector('.post').innerHTML =
+		'<h1 style="padding: 100px 0">Страница не найдена</h1>';
+	document.querySelector('.breadcrumbs').style.display = 'none';
+	document.querySelector('.title').style.display = 'none';
 }
 
 const title = document.querySelector('.title');
