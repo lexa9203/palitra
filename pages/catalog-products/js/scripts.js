@@ -10,6 +10,17 @@ const filtersMenu = document.querySelector('.filter-group-mobile');
 const closeBtn = document.querySelector('.close-btn');
 const resetBtn = document.querySelector('.reset-filter-btn');
 
+addEventListener(
+	'popstate',
+	function (e) {
+		const currentPage = e.target.location.hash.split('-')[1];
+		$(function () {
+			$('#pagination-container').pagination('selectPage', currentPage ?? 1);
+		});
+	},
+	false
+);
+
 const currentPage = window.location.hash.split('-')[1];
 
 if (currentPage) {

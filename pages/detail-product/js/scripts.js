@@ -20,6 +20,7 @@ const videoWrapper = document.querySelector('.video');
 const buttonsWrapper = document.querySelector('.button_wrap');
 const button = document.querySelector('.show_effects');
 const hideButton = document.querySelector('.hide_effects');
+const additionalInfo = document.querySelector('.additional_info');
 
 document.title = product.name;
 productAboutText.textContent = product.about;
@@ -28,6 +29,7 @@ productImg.src = product.img;
 productImg.alt = product.name;
 navProduct.textContent = product.name;
 title.textContent = product.name;
+additionalInfo.innerHTML = product.additionalInfo;
 
 product.imgEffects.forEach(el => {
 	const wrapperEffects = document.createElement('div');

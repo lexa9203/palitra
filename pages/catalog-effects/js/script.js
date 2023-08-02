@@ -9,6 +9,17 @@ const effectTemplate = document.querySelector('#effect-template').content;
 const effectsWrap = document.querySelector('.effects');
 const filters = document.querySelectorAll('.filter');
 
+addEventListener(
+	'popstate',
+	function (e) {
+		const currentPage = e.target.location.hash.split('-')[1];
+		$(function () {
+			$('#pagination-container').pagination('selectPage', currentPage ?? 1);
+		});
+	},
+	false
+);
+
 const currentPage = window.location.hash.split('-')[1];
 
 if (currentPage) {

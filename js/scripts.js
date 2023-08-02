@@ -6,6 +6,22 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+const swiperPortfolio = new Swiper('.swiper_portfolio', {
+	effect: 'fade',
+	loop: true,
+	autoplay: {
+		delay: 5000,
+	},
+	fadeEffect: {
+		crossFade: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	speed: 2000,
+});
+
 const menu = document.querySelector('.navigation');
 
 window.addEventListener('scroll', () => {
